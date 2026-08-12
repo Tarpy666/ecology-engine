@@ -2,13 +2,17 @@
 
 Food chain sim: producers, prey, predators, decomposers; energy transfer; health score.
 
-Part of the Counted fleet (ecology-engine), generated from `seeds/seeds.yaml`.
+Part of the Counted fleet (ecology-engine), stack class `backend`, generated
+from `seeds/seeds.yaml`.
 
-## Architecture
+## Architecture (docs/REPO_STANDARD.md)
 
-- `src/modules.ts` — FoodChain, EnergyTransfer, HealthScore
+- `src/lib/modules.ts` — module registry: FoodChain, EnergyTransfer, HealthScore
+- `src/lib/rng.ts` — deterministic seeded PRNG (mulberry32)
 - `src/index.ts` — public API (`SPEC`, `MODULES`, FoodChain)
-- `src/rng.ts` — deterministic seeded PRNG (mulberry32)
+- `src/server/` — backend service layer (reserved)
+- `assets/<kind>/` — media by kind (see assets policy READMEs)
+- `docs/STRUCTURE.md` — this repo's stack declaration + layout map
 - `tests/index.test.ts` — deterministic behavior suite
 
 ## Usage

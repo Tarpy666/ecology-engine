@@ -2,6 +2,8 @@
   "name": "@counted/ecology-engine",
   "version": "0.1.0",
   "description": "Food chain sim: producers, prey, predators, decomposers; energy transfer; health score.",
+  "stack": "backend",
+  "family": "counted",
   "type": "module",
   "main": "dist/index.js",
   "exports": {
